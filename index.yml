@@ -21,9 +21,9 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName: GroupeName-SG
-      GroupDescription: GroupeName-SG
+      GroupDescription: GroupeDesciption-SG
       VpcId: !Ref myVPC
-      SecurityGroupEgress:
+      SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
