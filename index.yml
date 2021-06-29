@@ -17,3 +17,17 @@ Resources:
       Tags:
         - Key: Name
           Value: subnet1formCF
+  secGroupName:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: GroupeName-SG
+      GroupDescription: GroupeName-SG
+      VpcId: !Ref myVPC
+      SecurityGroupEgress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIP: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: SGfromCF
